@@ -1,16 +1,17 @@
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Header = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
     // You could also clear session or specific data here
-    alert("Logged out successfully!");
+    toast("Logged out successfully!");
     navigate("/buyer-login");
   };
 
   return (
-    <header className="bg-blue-600 text-white py-4 shadow-md">
+    <header className="bg-blue-400 text-white py-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center px-6">
         <h1
           className="text-xl font-bold cursor-pointer"
@@ -22,7 +23,7 @@ const Header = () => {
           <Link to="/about-us" className="hover:underline">
             About Us
           </Link>
-          <Link to="/avail-services" className="hover:underline">
+          <Link to="/buyer-dashboard" className="hover:underline">
             Avail Services
           </Link>
           <Link to="/manage-profile" className="hover:underline">

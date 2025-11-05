@@ -5,6 +5,7 @@ import BuyerLogin from "./components/buyers/BuyerLogin";
 import BuyerDashboard from "./components/buyers/BuyerDashboard";
 import ManageProfile from "./components/buyers/ManageProfile";
 import Aboutus from "./components/seller/Aboutus";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
           <Route path="/create-buyer" element={<BuyerCreation />} />
           <Route path="/buyer-login" element={<BuyerLogin />} />
           <Route path="/buyer-dashboard" element={<BuyerDashboard />} />
-          <Route path="manage-profile" element={<ManageProfile />} />
+          <Route path="/manage-profile" element={<ManageProfile />} />
           {/* Sellers */}
+          
         </Routes>
       </BrowserRouter>
     </div>

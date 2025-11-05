@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import dummydata from "./dummydata";
 
 const BuyerCreation = () => {
-  const [buyers, setBuyers] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,15 +25,11 @@ const BuyerCreation = () => {
     e.preventDefault();
 
     if (!formData.name || !formData.phone || !formData.address) {
-      alert("Fill in all the required fields!");
+      toast("Fill in all the required fields!");
       return;
     }
 
-    const existingBuyers = JSON.parse(localStorage.getItem("buyers")) || [];
-
-    const updatedBuyers = [...existingBuyers, formData];
-
-    localStorage.setItem("buyers", JSON.stringify(updatedBuyers));
+    dummydata.addBuyer(formData);
 
     setFormData({
       name: "",

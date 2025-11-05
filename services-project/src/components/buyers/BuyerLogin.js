@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import dummydata from "./dummydata";
+import { toast } from "react-toastify";
 
 function BuyerLogin() {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({ email: "", name: "" });
+  const [formData, setFormData] = useState({ email: "", password: "" });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -11,13 +13,23 @@ function BuyerLogin() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    const savedUsers = JSON.parse(localStorage.getItem("buyers")) || [];
-    const userExists = savedUsers.find(
+    const buyers = dummydata.getBuyers() || [];
+
+    if (!buyers.length) {
+      toast("No buyers found! Please create an account first!");
+      return;
+    }
+
+    const userExists = buyers.find(
       (buyer) =>
         buyer.email === formData.email && buyer.password === formData.password
     );
+
     if (userExists) {
+      localStorage.setItem("currentBuyer", JSON.stringify(userExists));
       navigate("/buyer-dashboard");
+    } else {
+      toast("Invalid email or password. Please try again!");
     }
   };
 
@@ -46,7 +58,12 @@ function BuyerLogin() {
             className="w-full border rounded-lg p-2"
             required
           />
-          <button type="submit">Login</button>
+          <button
+            type="submit"
+            className="w-full bg-blue-400 text-white py-2 rounded-lg hover:bg-blue-600 transition"
+          >
+            Login
+          </button>
         </form>
         <p className="text-sm text-center mt-3">
           Don't have an account?
