@@ -23,7 +23,7 @@ const Header = () => {
           <Link to="/about-us" className="hover:underline">
             About Us
           </Link>
-          <Link to="/buyer-dashboard" className="hover:underline">
+          <Link to="/avail-services" className="hover:underline">
             Avail Services
           </Link>
           <Link to="/manage-profile" className="hover:underline">

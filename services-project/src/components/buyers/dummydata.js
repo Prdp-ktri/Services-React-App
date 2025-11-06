@@ -4,7 +4,7 @@ let buyers = JSON.parse(localStorage.getItem("buyers")) || [];
 
 const sync = () => {
   localStorage.setItem("buyers", JSON.stringify(buyers));
-};
+}; 
 
 const dummydata = {
   addBuyer(buyer) {
