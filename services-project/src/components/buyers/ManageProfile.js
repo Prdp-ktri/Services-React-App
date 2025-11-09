@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Header from "./Header";
 import dummydata from "./dummydata";
+import Footer from "./Footer";
 
 const ManageProfile = () => {
   const [buyer, setBuyer] = useState({});
@@ -105,6 +106,9 @@ const ManageProfile = () => {
             </button>
           </div>
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

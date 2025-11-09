@@ -52,7 +52,7 @@ function AddService() {
   };
 
   return (
-    <div>
+    <div> 
       <SellerHeader />
       <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-2xl">
         <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">

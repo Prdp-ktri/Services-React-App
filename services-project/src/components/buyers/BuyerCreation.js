@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import dummydata from "./dummydata";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const BuyerCreation = () => {
   const [formData, setFormData] = useState({
@@ -172,6 +173,9 @@ const BuyerCreation = () => {
             Create
           </button>
         </form>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

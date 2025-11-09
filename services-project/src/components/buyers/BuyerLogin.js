@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import dummydata from "./dummydata";
 import { toast } from "react-toastify";
+import Footer from "./Footer";
 
 function BuyerLogin() {
   const navigate = useNavigate();
@@ -71,6 +72,9 @@ function BuyerLogin() {
             Create one
           </Link>
         </p>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const AvailServices = () => {
   const IT_SERVICES = [
@@ -27,6 +28,8 @@ const AvailServices = () => {
   const [address, setAddress] = useState("");
   const [timing, setTiming] = useState("");
   const [savedRequests, setSavedRequests] = useState([]);
+  const [editMode, setEditMode] = useState(false);
+  const [editId, setEditId] = useState(null);
 
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem("serviceRequests")) || [];
@@ -46,21 +49,45 @@ const AvailServices = () => {
       return;
     }
 
-    const newRequest = {
-      id: Date.now(),
-      service: selectedService,
-      address,
-      timing,
-    };
+    if (editMode) {
+      const updatedRequests = savedRequests.map((req) =>
+        req.id === editId
+          ? { ...req, service: selectedService, address, timing }
+          : req
+      );
 
-    const updatedRequests = [...savedRequests, newRequest];
-    setSavedRequests(updatedRequests);
-    localStorage.setItem("serviceRequests", JSON.stringify(updatedRequests));
+      setSavedRequests(updatedRequests);
+      localStorage.setItem("serviceRequests", JSON.stringify(updatedRequests));
 
-    alert("Service request saved successfully!");
-    setSelectedService("");
-    setAddress("");
-    setTiming("");
+      alert("Service request updated successfully!");
+      setEditMode(false);
+      setEditId(null);
+    } else {
+      const newRequest = {
+        id: Date.now(),
+        service: selectedService,
+        address,
+        timing,
+      };
+
+      const updatedRequests = [...savedRequests, newRequest];
+      setSavedRequests(updatedRequests);
+      localStorage.setItem("serviceRequests", JSON.stringify(updatedRequests));
+
+      alert("Service request saved successfully!");
+      setSelectedService("");
+      setAddress("");
+      setTiming("");
+    }
+  };
+
+  const handleEdit = (req) => {
+    setSelectedService(req.service);
+    setAddress(req.address);
+    setTiming(req.timing);
+    setEditMode(true);
+    setEditId(req.id);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleDelete = (id) => {
@@ -228,6 +255,7 @@ const AvailServices = () => {
                         {new Date(req.timing).toLocaleString()}
                       </p>
                     </div>
+                    <button onClick={() => handleEdit(req)}>Edit</button>
                     <button
                       onClick={() => handleDelete(req.id)}
                       className="text-red-600 hover:text-red-800 font-semibold"
@@ -240,6 +268,9 @@ const AvailServices = () => {
             </div>
           )}
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

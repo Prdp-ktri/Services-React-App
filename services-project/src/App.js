@@ -25,6 +25,7 @@ function App() {
           <Route path="/avail-services" element={<AvailServices />} />
           <Route path="/buyer-dashboard" element={<BuyerDashboard />} />
           <Route path="/manage-profile" element={<ManageProfile />} />
+
           {/* Sellers */}
           <Route path="/buyers" element={<Buyers />} />
           <Route path="/add-service" element={<AddService />} />

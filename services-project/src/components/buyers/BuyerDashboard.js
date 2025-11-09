@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./Header";
 import AvailServices from "./AvailServices";
 import ManageProfile from "./ManageProfile";
+import Footer from "./Footer";
 
 const BuyerDashboard = () => {
   const [activeTab, setActiveTab] = useState("services");
@@ -49,6 +50,9 @@ const BuyerDashboard = () => {
             {activeTab === "services" ? <AvailServices /> : <ManageProfile />}
           </div>
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
