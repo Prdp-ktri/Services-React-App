@@ -43,7 +43,7 @@ const BuyerCreation = () => {
       state: "",
     });
 
-    navigate("/buyer-login");
+    navigate("/");
   };
 
   return (
