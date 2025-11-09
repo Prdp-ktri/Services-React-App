@@ -26,7 +26,7 @@ const BuyerDashboard = () => {
               onClick={() => setActiveTab("services")}
               className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
                 activeTab === "services"
-                  ? "bg-blue-500 text-white shadow-lg scale-105"
+                  ? "bg-orange-500 text-white shadow-lg scale-105"
                   : "bg-white text-gray-800 border hover:bg-gray-100"
               }`}
             >
@@ -37,7 +37,7 @@ const BuyerDashboard = () => {
               onClick={() => setActiveTab("profile")}
               className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
                 activeTab === "profile"
-                  ? "bg-blue-500 text-white shadow-lg scale-105"
+                  ? "bg-orange-500 text-white shadow-lg scale-105"
                   : "bg-white text-gray-800 border hover:bg-gray-100"
               }`}
             >

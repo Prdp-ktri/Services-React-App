@@ -61,7 +61,7 @@ function BuyerLogin() {
           />
           <button
             type="submit"
-            className="w-full bg-blue-400 text-white py-2 rounded-lg hover:bg-blue-600 transition"
+            className="w-full bg-orange-400 text-white py-2 rounded-lg hover:bg-orange-600 transition"
           >
             Login
           </button>

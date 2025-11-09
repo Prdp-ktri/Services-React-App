@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import SellerHeader from "./SellerHeader";
 import { Edit3, Save, User } from "lucide-react";
+import SellerFooter from "./SellerFooter";
 
 function SellerManageProfile() {
   // Dummy seller details
@@ -31,7 +32,10 @@ function SellerManageProfile() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div
+      className="min-h-screen bg-cover bg-center relative"
+      style={{ backgroundImage: "url('/images/seller-services.png')" }}
+    >
       <SellerHeader />
 
       <div className="max-w-4xl mx-auto mt-10 bg-white p-8 rounded-2xl shadow-lg">
@@ -128,6 +132,9 @@ function SellerManageProfile() {
             )}
           </div>
         </div>
+      </div>
+      <div>
+        <SellerFooter />
       </div>
     </div>
   );

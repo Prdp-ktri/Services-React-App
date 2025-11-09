@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import SellerHeader from "./SellerHeader";
+import SellerFooter from "./SellerFooter";
 
 function AddService() {
   const [formData, setFormData] = useState({
@@ -52,9 +53,14 @@ function AddService() {
   };
 
   return (
-    <div> 
+    <div
+      className="min-h-screen bg-cover bg-center relative"
+      style={{ backgroundImage: "url('/images/seller-services.png')" }}
+    >
+      {/* <div className="absolute inset-0 bg-black/30"></div> */}
       <SellerHeader />
       <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-2xl">
+        {/* overlay for readability */}
         <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">
           Add New Service
         </h2>
@@ -150,6 +156,9 @@ function AddService() {
             </ul>
           </div>
         )}
+      </div>
+      <div>
+        <SellerFooter />
       </div>
     </div>
   );

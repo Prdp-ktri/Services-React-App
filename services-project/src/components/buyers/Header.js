@@ -7,7 +7,7 @@ const Header = () => {
   const handleLogout = () => {
     // You could also clear session or specific data here
     toast("Logged out successfully!");
-    navigate("/buyer-login");
+    navigate("/");
   };
 
   return (

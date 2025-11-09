@@ -3,12 +3,16 @@ import { useNavigate } from "react-router-dom";
 import SellerHeader from "./SellerHeader";
 import AddService from "./AddService";
 import Buyers from "./buyers";
+import SellerFooter from "./SellerFooter";
 
 function SellerDashboard() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div
+      className="min-h-screen bg-cover bg-center relative"
+      style={{ backgroundImage: "url('/images/seller-services.png')" }}
+    >
       <SellerHeader />
 
       <div className="max-w-6xl mx-auto p-6">
@@ -52,6 +56,9 @@ function SellerDashboard() {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <SellerFooter />
       </div>
     </div>
   );

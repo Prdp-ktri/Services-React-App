@@ -3,6 +3,7 @@ import dummydata from "../buyers/dummydata";
 import { toast } from "react-toastify";
 import SellerHeader from "./SellerHeader";
 import { User, Trash2, Mail, MapPin, Phone } from "lucide-react";
+import SellerFooter from "./SellerFooter";
 
 function Buyers() {
   const [buyers, setBuyers] = useState([]);
@@ -26,7 +27,10 @@ function Buyers() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div
+      className="min-h-screen bg-cover bg-center relative"
+      style={{ backgroundImage: "url('/images/seller-services.png')" }}
+    >
       <SellerHeader />
 
       <div className="max-w-6xl mx-auto p-8">
@@ -90,6 +94,9 @@ function Buyers() {
             ))}
           </div>
         )}
+      </div>
+      <div>
+        <SellerFooter />
       </div>
     </div>
   );

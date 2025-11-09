@@ -92,7 +92,7 @@ const ManageProfile = () => {
             ) : (
               <button
                 onClick={() => setEditable(true)}
-                className="bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-600"
+                className="bg-orange-400 text-white px-4 py-2 rounded hover:bg-orange-600"
               >
                 Edit Profile
               </button>
@@ -100,7 +100,7 @@ const ManageProfile = () => {
 
             <button
               onClick={deleteProfile}
-              className="bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-600"
+              className="bg-orange-400 text-white px-4 py-2 rounded hover:bg-orange-600"
             >
               Delete
             </button>
