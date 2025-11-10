@@ -17,12 +17,12 @@ function Aboutus() {
         <div className="max-w-5xl mx-auto px-6 py-12 bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl my-10">
           {/* Title Section */}
           <div className="text-center mb-10">
-            <h2 className="text-4xl font-extrabold text-blue-400 mb-3">
+            <h2 className="text-4xl font-extrabold text-orange-400 mb-3">
               🏢 About Us
             </h2>
             <p className="text-lg font-medium text-gray-600">
               Welcome to{" "}
-              <span className="text-blue-600 font-semibold">ServiceLink</span>
+              <span className="text-orange-600 font-semibold">ServiceLink</span>
             </p>
             {/* <img
               src="/images/about-us.jpg"
@@ -50,7 +50,7 @@ function Aboutus() {
 
           {/* Mission */}
           <div className="mb-10">
-            <h2 className="text-3xl font-bold text-blue-700 mb-4">
+            <h2 className="text-3xl font-bold text-orange-700 mb-4">
               💡 Our Mission
             </h2>
             <p className="text-lg leading-relaxed text-gray-700">
@@ -62,7 +62,7 @@ function Aboutus() {
 
           {/* Vision */}
           <div className="mb-10">
-            <h2 className="text-3xl font-bold text-blue-700 mb-4">
+            <h2 className="text-3xl font-bold text-orange-700 mb-4">
               🌍 Our Vision
             </h2>
             <p className="text-lg leading-relaxed text-gray-700">
@@ -73,33 +73,33 @@ function Aboutus() {
 
           {/* What We Offer */}
           <div className="mb-10">
-            <h2 className="text-3xl font-bold text-blue-700 mb-4">
+            <h2 className="text-3xl font-bold text-orange-700 mb-4">
               🔧 What We Offer
             </h2>
             <ul className="list-disc pl-6 space-y-3 text-lg text-gray-700">
               <li>
-                <span className="font-semibold text-blue-600">
+                <span className="font-semibold text-orange-600">
                   IT Services:
                 </span>{" "}
                 Web Development, App Solutions, IT Consulting, Data Analytics,
                 and more.
               </li>
               <li>
-                <span className="font-semibold text-blue-600">
+                <span className="font-semibold text-orange-600">
                   Non-IT Services:
                 </span>{" "}
                 Content Creation, Online Education, Health & Wellness, Event
                 Planning, and more.
               </li>
               <li>
-                <span className="font-semibold text-blue-600">
+                <span className="font-semibold text-orange-600">
                   User-Friendly Portal:
                 </span>{" "}
                 Easy login, service selection, and profile management for buyers
                 and sellers.
               </li>
               <li>
-                <span className="font-semibold text-blue-600">
+                <span className="font-semibold text-orange-600">
                   Secure Experience:
                 </span>{" "}
                 Your information stays safe, and your satisfaction remains our
@@ -113,7 +113,7 @@ function Aboutus() {
             Since 2013, thousands of users have trusted us to make their
             personal and professional lives easier — one service at a time.{" "}
             <br />
-            <span className="font-semibold text-blue-600">
+            <span className="font-semibold text-orange-600">
               Join us today
             </span>{" "}
             and experience how simple it can be to find the right service, at

@@ -113,7 +113,7 @@ const AvailServices = () => {
 
           {/* IT Services */}
           <div className="bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg">
-            <h3 className="text-xl font-semibold mb-3 text-blue-700">
+            <h3 className="text-xl font-semibold mb-3 text-orange-700">
               IT Services You Can Avail
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -135,7 +135,7 @@ const AvailServices = () => {
 
           {/* Non-IT Services */}
           <div className="bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg">
-            <h3 className="text-xl font-semibold mb-3 text-blue-700">
+            <h3 className="text-xl font-semibold mb-3 text-orange-700">
               Non-IT Services You Can Avail
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -158,7 +158,7 @@ const AvailServices = () => {
           {/* Seller Added Services */}
           {addedServices.length > 0 && (
             <div className="bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-semibold mb-3 text-blue-700">
+              <h3 className="text-xl font-semibold mb-3 text-orange-700">
                 Additional Services Added by Sellers
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -234,7 +234,7 @@ const AvailServices = () => {
           {/* Saved Requests */}
           {savedRequests.length > 0 && (
             <div className="bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold mb-3 text-gray-800">
+              <h3 className="text-lg font-semibold mb-3 text-orange-800">
                 Saved Service Requests
               </h3>
               <ul className="space-y-3">
@@ -244,7 +244,7 @@ const AvailServices = () => {
                     className="border p-3 rounded-lg bg-white/70 flex justify-between items-start"
                   >
                     <div>
-                      <p className="font-semibold text-blue-700">
+                      <p className="font-semibold text-orange-700">
                         {req.service}
                       </p>
                       <p className="text-sm text-gray-600 mt-1">
